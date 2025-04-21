@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <div className="matrix-background" />
       <Header />
       <main>
         <Hero />

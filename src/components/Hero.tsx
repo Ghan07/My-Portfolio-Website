@@ -1,11 +1,11 @@
-
 import { Button } from "./ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="text-center space-y-8 animate-fade-in">
+    <section className="min-h-screen flex items-center justify-center pt-16 section-gradient relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-indigo-50/50 pointer-events-none" />
+      <div className="text-center space-y-8 animate-fade-in relative z-10">
         <h1 className="text-6xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
           Your Name
         </h1>

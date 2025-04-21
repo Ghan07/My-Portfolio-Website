@@ -1,10 +1,10 @@
-
 import { Card, CardContent } from "./ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-white to-blue-50">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 section-gradient relative">
+      <div className="absolute inset-0 bg-white/40" />
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
           About Me
         </h2>

@@ -99,3 +99,41 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes matrix-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.03;
+  background: 
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px) 0 0 / 40px 40px;
+  animation: matrix-fade 2s ease-out forwards;
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
