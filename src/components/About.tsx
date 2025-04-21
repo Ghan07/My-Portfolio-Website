@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "./ui/card";
 
 const About = () => {
@@ -11,10 +12,11 @@ const About = () => {
         <Card className="max-w-3xl mx-auto transform transition-all hover:scale-[1.01] animate-fade-in">
           <CardContent className="p-6">
             <p className="text-gray-600 leading-relaxed">
-              I am a passionate Computer Science student at [Your University], with a keen interest in software development
-              and artificial intelligence. Currently in my [Year] year, I'm actively seeking internship opportunities
-              where I can apply my technical skills and learn from industry experts. My goal is to contribute to
-              innovative projects while developing my expertise in full-stack development.
+              I am a passionate Computer Science student with a strong interest in software development 
+              and cybersecurity. Proficient in multiple programming languages and tools, I am constantly 
+              exploring new technologies and seeking opportunities to apply my technical skills in 
+              real-world projects. My goal is to contribute to innovative solutions while expanding 
+              my knowledge in software engineering and cybersecurity domains.
             </p>
           </CardContent>
         </Card>

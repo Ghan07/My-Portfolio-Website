@@ -6,18 +6,18 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Project 1",
-      description: "A brief description of your first project and its impact.",
-      tools: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/yourusername/project1",
-      live: "https://project1.com",
+      title: "Photography Website",
+      description: "A responsive website showcasing photography skills using modern web technologies.",
+      tools: ["HTML", "CSS", "JavaScript", "Node.js"],
+      github: "https://github.com/ghanshyamchaudhary/photography-website",
+      live: "#", // Replace with actual live demo link if available
     },
     {
-      title: "Project 2",
-      description: "Description of your second project highlighting key features.",
-      tools: ["Python", "TensorFlow", "Flask"],
-      github: "https://github.com/yourusername/project2",
-      live: "https://project2.com",
+      title: "Food Resource Management",
+      description: "A web application for managing and tracking food resources, helping reduce food waste.",
+      tools: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/ghanshyamchaudhary/food-resource-management",
+      live: "#", // Replace with actual live demo link if available
     },
   ];
 
