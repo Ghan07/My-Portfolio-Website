@@ -7,7 +7,9 @@ const Hero = () => {
     <section 
       className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden"
       style={{
-        background: "linear-gradient(90deg, rgba(34, 34, 64, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)"
+        background: "linear-gradient(90deg, rgba(34, 34, 64, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)",
+        backgroundSize: "200% 200%",
+        animation: "gradient-shift 15s ease infinite"
       }}
     >
       <div className="text-center space-y-8 animate-fade-in relative z-10">
@@ -15,7 +17,7 @@ const Hero = () => {
           Ghanshyam Chaudhary
         </h1>
         <h2 className="text-2xl text-gray-200 font-light">
-          Software Developer & Cybersecurity Enthusiast
+          Cybersecurity Enthusiast
         </h2>
         <div className="flex justify-center space-x-6">
           <Button 

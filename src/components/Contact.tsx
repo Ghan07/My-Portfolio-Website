@@ -1,11 +1,14 @@
-
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 relative" style={{
+      background: "linear-gradient(45deg, rgba(34, 34, 64, 0.9) 0%, rgba(9, 9, 121, 0.9) 50%, rgba(0, 212, 255, 0.9) 100%)",
+      backgroundSize: "200% 200%",
+      animation: "gradient-shift 15s ease infinite"
+    }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Get In Touch</h2>
         <Card className="max-w-md mx-auto">

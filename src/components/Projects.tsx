@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { ExternalLink, Github, Camera } from "lucide-react";
@@ -34,10 +33,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
-      <div className={`fixed inset-0 bg-white pointer-events-none z-50 ${isFlashing ? 'opacity-70' : 'opacity-0'} transition-opacity duration-300`}></div>
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+    <section id="projects" className="py-20 relative" style={{
+      background: "linear-gradient(135deg, rgba(34, 34, 64, 0.9) 0%, rgba(9, 9, 121, 0.9) 50%, rgba(0, 212, 255, 0.9) 100%)",
+      backgroundSize: "200% 200%",
+      animation: "gradient-shift 15s ease infinite"
+    }}>
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl font-bold text-center mb-8 text-white">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project) => (
             <Card key={project.title} className="overflow-hidden group">

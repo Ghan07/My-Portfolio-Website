@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Award } from "lucide-react";
 
@@ -22,7 +21,11 @@ const Certificates = () => {
   ];
 
   return (
-    <section id="certificates" className="py-20">
+    <section id="certificates" className="py-20 relative" style={{
+      background: "linear-gradient(315deg, rgba(34, 34, 64, 0.9) 0%, rgba(9, 9, 121, 0.9) 50%, rgba(0, 212, 255, 0.9) 100%)",
+      backgroundSize: "200% 200%",
+      animation: "gradient-shift 15s ease infinite"
+    }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Certificates & Achievements</h2>
         <div className="grid md:grid-cols-3 gap-6">
