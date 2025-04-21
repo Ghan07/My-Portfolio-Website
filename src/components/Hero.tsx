@@ -4,40 +4,44 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-16 section-gradient relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-indigo-50/50 pointer-events-none" />
+    <section 
+      className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(90deg, rgba(34, 34, 64, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)"
+      }}
+    >
       <div className="text-center space-y-8 animate-fade-in relative z-10">
-        <h1 className="text-6xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="text-6xl font-bold text-white">
           Ghanshyam Chaudhary
         </h1>
-        <h2 className="text-2xl text-gray-600 font-light">
+        <h2 className="text-2xl text-gray-200 font-light">
           Software Developer & Cybersecurity Enthusiast
         </h2>
         <div className="flex justify-center space-x-6">
           <Button 
             variant="outline" 
             size="icon"
-            className="transition-transform hover:scale-110"
+            className="transition-transform hover:scale-110 bg-white/20 border-white/40 text-white"
           >
-            <a href="mailto:ghanshyamchaudhary@example.com" className="hover:text-blue-600">
+            <a href="mailto:ghanshyamchaudhary@example.com" className="hover:text-blue-300">
               <Mail className="h-5 w-5" />
             </a>
           </Button>
           <Button 
             variant="outline" 
             size="icon"
-            className="transition-transform hover:scale-110"
+            className="transition-transform hover:scale-110 bg-white/20 border-white/40 text-white"
           >
-            <a href="https://linkedin.com/in/ghanshyam-chaudhary" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+            <a href="https://linkedin.com/in/ghanshyam-chaudhary" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
               <Linkedin className="h-5 w-5" />
             </a>
           </Button>
           <Button 
             variant="outline" 
             size="icon"
-            className="transition-transform hover:scale-110"
+            className="transition-transform hover:scale-110 bg-white/20 border-white/40 text-white"
           >
-            <a href="https://github.com/ghanshyamchaudhary" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">
+            <a href="https://github.com/ghanshyamchaudhary" target="_blank" rel="noopener noreferrer" className="hover:text-white">
               <Github className="h-5 w-5" />
             </a>
           </Button>

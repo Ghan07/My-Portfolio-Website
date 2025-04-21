@@ -1,9 +1,17 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Camera } from "lucide-react";
+import { useState } from "react";
 
 const Projects = () => {
+  const [isFlashing, setIsFlashing] = useState(false);
+
+  const handleCameraHover = () => {
+    setIsFlashing(true);
+    setTimeout(() => setIsFlashing(false), 300);
+  };
+
   const projects = [
     {
       title: "Photography Website",
@@ -11,6 +19,8 @@ const Projects = () => {
       tools: ["HTML", "CSS", "JavaScript", "Node.js"],
       github: "https://github.com/ghanshyamchaudhary/photography-website",
       live: "#", // Replace with actual live demo link if available
+      icon: <Camera className="h-6 w-6 text-blue-500" onMouseEnter={handleCameraHover} />,
+      image: null
     },
     {
       title: "Food Resource Management",
@@ -18,20 +28,35 @@ const Projects = () => {
       tools: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/ghanshyamchaudhary/food-resource-management",
       live: "#", // Replace with actual live demo link if available
+      icon: null,
+      image: "https://images.unsplash.com/photo-1607877742244-7fba6af3fb21?auto=format&fit=crop&w=300&h=200"
     },
   ];
 
   return (
     <section id="projects" className="py-20">
+      <div className={`fixed inset-0 bg-white pointer-events-none z-50 ${isFlashing ? 'opacity-70' : 'opacity-0'} transition-opacity duration-300`}></div>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project) => (
-            <Card key={project.title}>
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+            <Card key={project.title} className="overflow-hidden group">
+              <CardHeader className="flex flex-row items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <CardTitle>{project.title}</CardTitle>
+                  {project.icon && project.icon}
+                </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative">
+                {project.image && (
+                  <div className="absolute -right-20 top-0 group-hover:right-0 transition-all duration-500 transform group-hover:scale-95">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-24 h-24 object-cover rounded-md shadow-md" 
+                    />
+                  </div>
+                )}
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tools.map((tool) => (
