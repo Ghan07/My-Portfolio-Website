@@ -1,0 +1,41 @@
+
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+
+const Education = () => {
+  return (
+    <section id="education" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Education</h2>
+        <Card className="max-w-3xl mx-auto">
+          <CardHeader>
+            <CardTitle>Bachelor of Science in Computer Science</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div>
+                <p className="text-gray-600">[Your University Name]</p>
+                <p className="text-gray-500">2020 - 2024 (Expected)</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2">Relevant Coursework</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Data Structures", "Algorithms", "Database Systems", "Web Development", "Machine Learning"]
+                    .map((course) => (
+                      <span
+                        key={course}
+                        className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+};
+
+export default Education;
