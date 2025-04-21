@@ -26,14 +26,14 @@ const About = () => {
               {text.split(' ').map((word, index) => (
                 <span
                   key={index}
-                  className="inline-block transition-colors duration-300 hover:text-[#98FB98]"
+                  className="inline-block mr-1 transition-colors duration-300 hover:text-[#98FB98]"
                   style={{
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `${index * 50}ms`,
                     opacity: 0,
                     animation: 'fadeInWord 0.5s forwards'
                   }}
                 >
-                  {word}{' '}
+                  {word}
                 </span>
               ))}
             </p>
