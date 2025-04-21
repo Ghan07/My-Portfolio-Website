@@ -8,7 +8,9 @@ const Education = () => {
       animation: "gradient-shift 15s ease infinite"
     }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Education</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm">
+          Education
+        </h2>
         <Card className="max-w-3xl mx-auto">
           <CardHeader>
             <CardTitle>B.tech in Computer Science and Engineering</CardTitle>

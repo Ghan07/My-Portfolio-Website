@@ -27,7 +27,9 @@ const Certificates = () => {
       animation: "gradient-shift 15s ease infinite"
     }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Certificates & Achievements</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm">
+          Certificates & Achievements
+        </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {achievements.map((achievement) => (
             <Card key={achievement.title}>
