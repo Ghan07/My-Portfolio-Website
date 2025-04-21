@@ -95,20 +95,20 @@ const Skills = () => {
   return (
     <section 
       id="skills" 
-      className="py-20"
+      className="py-20 parallax"
       style={{
         background: "linear-gradient(45deg, oklab(74.4% 0.089 0.15), oklab(40.1% 0.022 -0.205), oklab(49.8% -0.108 0.089), oklab(28.8% 0.023 0.037), oklab(0% 0 0))"
       }}
     >
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white">
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm">
           Skills
         </h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 w-full">
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title}
-              className="transform transition-all hover:scale-[1.05] hover:shadow-xl animate-fade-in bg-white/10 backdrop-blur-sm border-white/20 hover:bg-gradient-to-br hover:from-indigo-400 hover:to-purple-600"
+              className="transform transition-all duration-300 hover:scale-110 hover:shadow-xl animate-fade-in bg-white/10 backdrop-blur-sm border-white/20 hover:bg-gradient-to-br hover:from-indigo-400 hover:to-purple-600"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <CardContent className="p-6">

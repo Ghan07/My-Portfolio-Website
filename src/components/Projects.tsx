@@ -17,7 +17,7 @@ const Projects = () => {
       description: "A responsive website showcasing photography skills using modern web technologies.",
       tools: ["HTML", "CSS", "JavaScript", "Node.js"],
       github: "https://github.com/ghanshyamchaudhary/photography-website",
-      live: "#", // Replace with actual live demo link if available
+      live: "#",
       icon: <Camera className="h-6 w-6 text-blue-500" onMouseEnter={handleCameraHover} />,
       image: null
     },
@@ -26,23 +26,25 @@ const Projects = () => {
       description: "A web application for managing and tracking food resources, helping reduce food waste.",
       tools: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/ghanshyamchaudhary/food-resource-management",
-      live: "#", // Replace with actual live demo link if available
+      live: "#",
       icon: null,
-      image: "https://images.unsplash.com/photo-1607877742244-7fba6af3fb21?auto=format&fit=crop&w=300&h=200"
+      image: null
     },
   ];
 
   return (
-    <section id="projects" className="py-20 relative" style={{
+    <section id="projects" className="py-20 relative parallax" style={{
       background: "linear-gradient(135deg, rgba(34, 34, 64, 0.9) 0%, rgba(9, 9, 121, 0.9) 50%, rgba(0, 212, 255, 0.9) 100%)",
       backgroundSize: "200% 200%",
       animation: "gradient-shift 15s ease infinite"
     }}>
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm">
+          Projects
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6 w-full">
           {projects.map((project) => (
-            <Card key={project.title} className="overflow-hidden group">
+            <Card key={project.title} className="overflow-hidden group transform transition-all duration-300 hover:scale-110">
               <CardHeader className="flex flex-row items-center justify-between">
                 <div className="flex items-center gap-2">
                   <CardTitle>{project.title}</CardTitle>

@@ -138,6 +138,17 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes fadeInWord {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
