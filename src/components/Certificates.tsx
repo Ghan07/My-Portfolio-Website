@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Award } from "lucide-react";
 
@@ -26,7 +27,7 @@ const Certificates = () => {
       backgroundSize: "200% 200%",
       animation: "gradient-shift 15s ease infinite"
     }}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 flex flex-col items-center">
         <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm mx-auto">
           Certificates & Achievements
         </h2>

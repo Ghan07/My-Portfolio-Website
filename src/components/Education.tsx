@@ -1,14 +1,15 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 relative" style={{
+    <section id="education" className="py-20 relative parallax" style={{
       background: "linear-gradient(225deg, rgba(34, 34, 64, 0.9) 0%, rgba(9, 9, 121, 0.9) 50%, rgba(0, 212, 255, 0.9) 100%)",
       backgroundSize: "200% 200%",
       animation: "gradient-shift 15s ease infinite"
     }}>
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm">
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-center mb-8 text-white inline-block px-6 py-2 rounded-full bg-black/20 backdrop-blur-sm mx-auto">
           Education
         </h2>
         <Card className="max-w-3xl mx-auto">
